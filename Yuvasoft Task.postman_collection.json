@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "65dc272d-ee4d-48d0-b37d-140fb47c79bf",
+		"name": "Yuvasoft Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26708201",
+		"_collection_link": "https://bold-trinity-207194.postman.co/workspace/My-Workspace~36b7cbb9-1c45-4037-82ee-ec480d2654e3/collection/26708201-65dc272d-ee4d-48d0-b37d-140fb47c79bf?action=share&source=collection_link&creator=26708201"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"YuvaSoft\",\r\n    \"email\":\"YuvasoftSolutions@gmail.com\",\r\n    \"password\":\"YuvaSoft@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/createUser",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDE2MjM3MzJ9.LhtNJ21U2pWpu00E69KJ0Pxfw6tsweJbtdJekzJuHy8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"YuvasoftSolutions@gmail.com\",\r\n    \"password\":\"YuvaSoft@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/656cb7b4f24dd2d39b27ad8a/UserLogin",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"656cb7b4f24dd2d39b27ad8a",
+						"UserLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTZjYjdiNGYyNGRkMmQzOWIyN2FkOGEiLCJpYXQiOjE3MDE2MjM4NTB9.AAl27M5iToSw-EASEwTMw_RgJpYNVTKarh1xmc3ugUk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Pradum\",\r\n    \"description\": \"Software Developer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/656cb7b4f24dd2d39b27ad8a/post-details",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"656cb7b4f24dd2d39b27ad8a",
+						"post-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTZjYjdiNGYyNGRkMmQzOWIyN2FkOGEiLCJpYXQiOjE3MDE2MjM4NTB9.AAl27M5iToSw-EASEwTMw_RgJpYNVTKarh1xmc3ugUk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/656cb7b4f24dd2d39b27ad8a/get-details?postId=656cb8a9f24dd2d39b27ad94",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"656cb7b4f24dd2d39b27ad8a",
+						"get-details"
+					],
+					"query": [
+						{
+							"key": "postId",
+							"value": "656cb8a9f24dd2d39b27ad94"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTZjYjdiNGYyNGRkMmQzOWIyN2FkOGEiLCJpYXQiOjE3MDE2MjM4NTB9.AAl27M5iToSw-EASEwTMw_RgJpYNVTKarh1xmc3ugUk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"YuvaSoft\",\r\n    \"description\":\"IT Industry\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/656cb7b4f24dd2d39b27ad8a/update-details?postId=656cb8a9f24dd2d39b27ad94",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"656cb7b4f24dd2d39b27ad8a",
+						"update-details"
+					],
+					"query": [
+						{
+							"key": "postId",
+							"value": "656cb8a9f24dd2d39b27ad94"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTZjYjdiNGYyNGRkMmQzOWIyN2FkOGEiLCJpYXQiOjE3MDE2MjM4NTB9.AAl27M5iToSw-EASEwTMw_RgJpYNVTKarh1xmc3ugUk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/656cb7b4f24dd2d39b27ad8a/delete-details?postId=656cb8a9f24dd2d39b27ad94",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"656cb7b4f24dd2d39b27ad8a",
+						"delete-details"
+					],
+					"query": [
+						{
+							"key": "postId",
+							"value": "656cb8a9f24dd2d39b27ad94"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
