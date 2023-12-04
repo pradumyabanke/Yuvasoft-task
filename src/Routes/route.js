@@ -6,7 +6,7 @@ const Middleware = require("../Middleware/auth")
 
 
 Router.post("/createUser", Controller.createUser);
-Router.post("/:userId/UserLogin", Middleware.jwtValidation, Controller.userLogin);
+Router.post("/UserLogin", Middleware.jwtValidation, Controller.userLogin);
 Router.post("/:userId/post-details", Middleware.jwtValidation, Middleware.authorization, Controller.PostOperation);
 Router.get('/:userId/get-details', Middleware.jwtValidation, Middleware.authorization, Controller.GetOperation);
 Router.put('/:userId/update-details', Middleware.jwtValidation, Middleware.authorization, Controller.UpdateOperation);

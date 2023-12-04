@@ -42,7 +42,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDE2MjM3MzJ9.LhtNJ21U2pWpu00E69KJ0Pxfw6tsweJbtdJekzJuHy8",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTZjYjdiNGYyNGRkMmQzOWIyN2FkOGEiLCJpYXQiOjE3MDE2Njg1MDV9.4H9jQQyJr4_enGkleCd1K-wWZec8q6Bph-yH8IHBBF0",
 							"type": "string"
 						}
 					]
@@ -59,13 +59,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/656cb7b4f24dd2d39b27ad8a/UserLogin",
+					"raw": "localhost:5000/UserLogin",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"656cb7b4f24dd2d39b27ad8a",
 						"UserLogin"
 					]
 				}

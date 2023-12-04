@@ -54,11 +54,11 @@ const createUser = async function (req, res) {
 
 const userLogin = async function (req, res) {
     try {
-        const userId = req.params.userId;
+        
         let data = req.body;
         let { email, password } = data;
 
-        let userExists = await UserRegister.findOne({ email: email, _id: userId });
+        let userExists = await UserRegister.findOne({ email: email });
 
         if (!userExists) {
             return res.status(400).send({
